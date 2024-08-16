@@ -1,0 +1,233 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+    color: #817474;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+nav {
+    background-color: #000000;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    padding: 10px 0;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: flex-start;
+    padding-left: 20px;
+}
+
+nav ul li {
+    margin-right: 40px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    font-size: 1.1rem;
+    font-weight: 500;
+    transition: background-color 0.3s, color 0.3s;
+    border-radius: 5px;
+}
+
+nav ul li a:hover {
+    background-color: #a39d9d;
+    color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transform: translateY(-2px);
+}
+
+nav ul li a:active {
+    transform: translateY(0);
+}
+
+.top-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100vh;
+    background-color: #f5f5f5;
+  
+    padding: 40px 20px;
+    text-align: left;
+    position: relative;
+}
+
+.overlay-content {
+    max-width: 50%;
+    z-index: 1;
+}
+
+.overlay-content h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+}
+
+.overlay-content p {
+    font-size: 1.5rem;
+    font-weight: 300;
+    line-height: 1.5;
+    color: rgb(0, 0, 0);
+}
+
+.overlay-content .btn {
+    background-color: rgb(107, 95, 95);
+    color: #000000;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+    font-size: 1.2rem;
+    margin-top: 30px;
+}
+
+.overlay-content .btn:hover {
+    background-color: #333;
+    color: rgb(255, 255, 255);
+}
+
+.responsive-image {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: auto;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+    opacity: 0.9; 
+}
+
+.section {
+    padding: 60px 20px;
+    background-color: white;
+    margin-bottom: 20px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+h2 {
+    color: #000000;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.skill {
+    background-color: #f0f0f0;
+    padding: 20px;
+    margin: 10px;
+    flex-basis: 30%;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.skill:hover {
+    transform: translateY(-5px);
+}
+
+.skill i {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin: 10px 0 5px;
+}
+
+input, textarea {
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+}
+
+input[type="submit"] {
+    background-color: #000000;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.social-icons {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.social-icons a {
+    color: #333;
+    margin: 0 10px;
+    font-size: 2rem;
+    transition: color 0.3s;
+}
+
+.social-icons a:hover {
+    color: #000000;
+}
+
+@media screen and (max-width: 768px) {
+    .top-section {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px;
+        height: auto;
+    }
+
+    .overlay-content {
+        max-width: 100%;
+    }
+
+    .responsive-image {
+        position: static;
+        width: 100%;
+        height: auto;
+        opacity: 0.5; /* Adjust opacity for better visibility */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .overlay-content h1 {
+        font-size: 2.2rem;
+    }
+
+    .overlay-content p {
+        font-size: 1rem;
+    }
+}
